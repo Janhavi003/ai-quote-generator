@@ -46,31 +46,28 @@ export default function DailyQuoteClient({
   }
 
   return (
-    <main className="min-h-screen bg-white text-gray-900 flex items-center justify-center px-4">
+    <main className="min-h-screen bg-white text-gray-900 flex items-center justify-center px-6">
       <section className="max-w-2xl w-full flex flex-col items-center">
-        {/* Header */}
-        <header className="mb-10 text-center">
-          <h1 className="text-4xl font-semibold tracking-tight">
+        <header className="mb-14 text-center">
+          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">
             Daily AI Quote
           </h1>
-          <p className="mt-2 text-sm text-gray-500 uppercase">
+          <p className="mt-3 text-xs tracking-widest text-gray-400">
             {today}
           </p>
         </header>
 
-        {/* Quote card */}
-        <div ref={cardRef} className="p-6 rounded-[28px]">
+        <div ref={cardRef}>
           <QuoteCard
             quote={quote}
             label={isExploring ? "EXPLORING" : "DAILY REFLECTION"}
           />
         </div>
 
-        {/* Controls */}
-        <div className="mt-6 flex gap-3 justify-center">
+        <div className="mt-10 flex gap-3 flex-wrap justify-center">
           <button
             onClick={shuffleQuote}
-            className="px-4 py-2 border rounded-full text-sm hover:bg-gray-100 transition"
+            className="px-5 py-2.5 rounded-full border border-gray-300 text-sm hover:bg-gray-100 transition"
           >
             Shuffle
           </button>
@@ -78,7 +75,7 @@ export default function DailyQuoteClient({
           {isExploring && (
             <button
               onClick={backToToday}
-              className="px-4 py-2 border rounded-full text-sm hover:bg-gray-100 transition"
+              className="px-5 py-2.5 rounded-full border border-gray-300 text-sm hover:bg-gray-100 transition"
             >
               Back to Today
             </button>
@@ -86,7 +83,7 @@ export default function DailyQuoteClient({
 
           <button
             onClick={downloadQuote}
-            className="px-4 py-2 border rounded-full text-sm hover:bg-gray-100 transition"
+            className="px-5 py-2.5 rounded-full border border-gray-300 text-sm hover:bg-gray-100 transition"
           >
             Download
           </button>
