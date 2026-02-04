@@ -9,7 +9,7 @@ export default function WelcomePage() {
         </h1>
 
         <p className="text-gray-500 text-lg leading-relaxed mb-10">
-          A quiet daily space for reflection —  
+          A quiet daily space for reflection, featuring new and 
           thoughtful quotes generated fresh each day by AI.
         </p>
 
