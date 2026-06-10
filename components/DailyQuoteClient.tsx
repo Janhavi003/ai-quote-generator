@@ -52,9 +52,6 @@ export default function DailyQuoteClient({
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">
             Daily AI Quote
           </h1>
-          <p className="mt-3 text-xs tracking-widest text-gray-400">
-            {today}
-          </p>
         </header>
 
         <div ref={cardRef}>
